@@ -62,3 +62,7 @@ $RECYCLE.BIN/
 
 # Executable files
 *.EXE
+
+MASM.EXE
+LINK.EXE
+debug.exe
