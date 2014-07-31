@@ -1,4 +1,4 @@
-﻿assume cs:code
+assume cs:code
 data1 segment
 ;--  调入了一幅图像：这是您新建的图像  --
 ;--  宽度x高度=80x25  --
