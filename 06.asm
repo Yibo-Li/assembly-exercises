@@ -1,17 +1,17 @@
-assume cs:code
+ï»¿assume cs:code
 data segment
-;--  ÎÄ×Ö:  ÖÐ  --
-;--  ËÎÌå15;  ´Ë×ÖÌåÏÂ¶ÔÓ¦µÄµãÕóÎª£º¿íx¸ß=20x20   --
-;--  ¸ß¶È²»ÊÇ8µÄ±¶Êý£¬ÏÖµ÷ÕûÎª£º¿í¶Èx¸ß¶È=20x24  --;
+;--  æ–‡å­—:  ä¸­  --
+;--  å®‹ä½“15;  æ­¤å­—ä½“ä¸‹å¯¹åº”çš„ç‚¹é˜µä¸ºï¼šå®½xé«˜=20x20   --
+;--  é«˜åº¦ä¸æ˜¯8çš„å€æ•°ï¼ŒçŽ°è°ƒæ•´ä¸ºï¼šå®½åº¦xé«˜åº¦=20x24  --;
 DB  000H,000H,000H,000H,030H,000H,000H,03CH,000H,000H,038H,000H,000H,038H,000H,000H  
 DB  038H,000H,038H,038H,01CH,03FH,0FFH,0FCH,018H,038H,038H,018H,038H,038H,018H,038H  
 DB  038H,018H,038H,038H,018H,038H,038H,018H,038H,038H,03FH,0FFH,0F8H,038H,038H,038H  
 DB  000H,038H,000H,000H,038H,000H,000H,038H,000H,000H,038H,000H,000H,038H,000H,000H  
 DB  038H,000H,000H,038H,000H,000H,000H,000H  
 
-;--  ÎÄ×Ö:  »ª  --
-;--  ËÎÌå15;  ´Ë×ÖÌåÏÂ¶ÔÓ¦µÄµãÕóÎª£º¿íx¸ß=20x20   --
-;--  ¸ß¶È²»ÊÇ8µÄ±¶Êý£¬ÏÖµ÷ÕûÎª£º¿í¶Èx¸ß¶È=20x24  --;
+;--  æ–‡å­—:  åŽ  --
+;--  å®‹ä½“15;  æ­¤å­—ä½“ä¸‹å¯¹åº”çš„ç‚¹é˜µä¸ºï¼šå®½xé«˜=20x20   --
+;--  é«˜åº¦ä¸æ˜¯8çš„å€æ•°ï¼ŒçŽ°è°ƒæ•´ä¸ºï¼šå®½åº¦xé«˜åº¦=20x24  --;
 DB  000H,000H,000H,000H,008H,000H,003H,08EH,000H,003H,0CCH,018H,007H,00CH,03CH,00EH  
 DB  00CH,0FCH,00FH,00DH,0E0H,01FH,00FH,080H,03FH,00EH,00CH,077H,03CH,00CH,067H,0ECH  
 DB  00EH,007H,08CH,00EH,007H,00FH,0FEH,007H,038H,000H,000H,03CH,000H,000H,038H,00CH  
@@ -20,8 +20,8 @@ DB  038H,000H,000H,038H,000H,000H,000H,000H
 data ends
 
   
-;ÏÂÃæÒ»²¿·ÖÊÇ½«16½øÖÆÊý¾Ý×ª»»Îª¶þ½øÖÆÏÔÊ¾.ÓÃÀ´±È½ÏÇå³þµÄÃ÷°×µãÕóÇé¿ö  
-;ÒòÎªµãÕóµÄ¿í¸ß±È,Ïàµ±ÓÚ3*8¸öÎªÒ»ÐÐ,¿ÉÒÔÒþÔ¼¿´µ½ÖÐ×ÖµÄ¼â  
+;ä¸‹é¢ä¸€éƒ¨åˆ†æ˜¯å°†16è¿›åˆ¶æ•°æ®è½¬æ¢ä¸ºäºŒè¿›åˆ¶æ˜¾ç¤º.ç”¨æ¥æ¯”è¾ƒæ¸…æ¥šçš„æ˜Žç™½ç‚¹é˜µæƒ…å†µ  
+;å› ä¸ºç‚¹é˜µçš„å®½é«˜æ¯”,ç›¸å½“äºŽ3*8ä¸ªä¸ºä¸€è¡Œ,å¯ä»¥éšçº¦çœ‹åˆ°ä¸­å­—çš„å°–  
 ;00000000 00000000 00000000  
 ;00000000 00110000 00000000  
 ;00000000 00111100 00000000  
@@ -34,14 +34,14 @@ start:
     mov ds,ax  
     ;mov bx,0  
     mov si,0  
-    mov bh,100b ;ºÚµ×ºì×Ö  
-    mov bl,03h  ;ÐÄÐÎ  
-    mov ah,0    ;ÓÃax´æµãÕó  
-    mov dh,0    ;ÓÃÓÚ¼ÆÊýÅÐ¶¨3×ÖÃ¿ÐÐÑ­»·  
-    mov di,180  ;"ÖÐ"ÆðÊ¼Î»ÖÃ  
+    mov bh,100b ;é»‘åº•çº¢å­—  
+    mov bl,03h  ;å¿ƒå½¢  
+    mov ah,0    ;ç”¨axå­˜ç‚¹é˜µ  
+    mov dh,0    ;ç”¨äºŽè®¡æ•°åˆ¤å®š3å­—æ¯è¡Œå¾ªçŽ¯  
+    mov di,180  ;"ä¸­"èµ·å§‹ä½ç½®  
     jmp read  
   
-;×Ó³ÌÐò  
+;å­ç¨‹åº  
 over:   mov ax,4c00h  
     int 21h  
   
@@ -50,13 +50,13 @@ over:   mov ax,4c00h
 ;   ret  
 check:  cmp si,72  
     jne next2         
-    mov di,136  ;"»ª"ÆðÊ¼Î»ÖÃ;ÎªÊ²Ã´ÊÇÕâ¸öÎ»ÖÃ,¶ø²»ÊÇÎÒËãµÄÖÐ¼äÆ«ÓÒµÄÎ»ÖÃ¿ªÊ¼²Å¶Ô?  
+    mov di,136  ;"åŽ"èµ·å§‹ä½ç½®;ä¸ºä»€ä¹ˆæ˜¯è¿™ä¸ªä½ç½®,è€Œä¸æ˜¯æˆ‘ç®—çš„ä¸­é—´åå³çš„ä½ç½®å¼€å§‹æ‰å¯¹?  
   next2:cmp si,144  
     je over  
     cmp dh,3  
     jne read  
     mov dh,0  
-    add di,112  ;»»ÐÐ  
+    add di,112  ;æ¢è¡Œ  
     jmp read  
   
 read:     
@@ -79,15 +79,15 @@ doom:
     jmp check  
       
   
-;16½øÖÆ×ª»¯Îª2½øÖÆ,²¢ÈëÕ»´æ´¢  
+;16è¿›åˆ¶è½¬åŒ–ä¸º2è¿›åˆ¶,å¹¶å…¥æ ˆå­˜å‚¨  
 div2:     
     mov cx,8  
    s0:  mov dl,2  
     div dl  
-    mov dl,al   ;ÉÌÔÝ´æÓÚdlÖÐ  
+    mov dl,al   ;å•†æš‚å­˜äºŽdlä¸­  
     mov al,0  
-    push ax     ;ÓàÊýÈëÕ»  
-    mov al,dl   ;ÉÏ´Î³ý·¨µÄÉÌ»Ö¸´µ½axÖÐ  
+    push ax     ;ä½™æ•°å…¥æ ˆ  
+    mov al,dl   ;ä¸Šæ¬¡é™¤æ³•çš„å•†æ¢å¤åˆ°axä¸­  
   loop  s0  
     jmp doom  
   

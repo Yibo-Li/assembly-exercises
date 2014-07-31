@@ -1,4 +1,4 @@
-assume cs:code
+锘縜ssume cs:code
 OriginalStr segment
     db 'Hello world!'
 OriginalStr ends
@@ -23,7 +23,7 @@ stack ends
 
 code segment
 start:
-	;加密过程
+	;鍔犲瘑杩囩▼
 	mov ax,stack
 	mov ss,ax
 	mov sp,16
@@ -48,7 +48,7 @@ s1:
 	mov [bx+10h],al
 	push ax
 
-	;解密过程
+	;瑙ｅ瘑杩囩▼
 	mov ax,EncryStr
 	mov ds,ax
 	mov bx,11
@@ -71,7 +71,7 @@ s2:
 	dec bx
 	loop s2
 
-	;屏幕显示
+	;灞忓箷鏄剧ず
 	mov ax,0b878h
 	mov ds,ax
 	mov ax,words

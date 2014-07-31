@@ -1,4 +1,4 @@
-assume cs:code
+锘縜ssume cs:code
 data segment
     dw 2,15,0
 data ends
@@ -7,7 +7,7 @@ stack segment
 stack ends
 code segment
 start:
-	;使用add计算乘方
+	;浣跨敤add璁＄畻涔樻柟
 	mov ax,stack
 	mov ss,ax
 	mov sp,16
@@ -31,7 +31,7 @@ s:
 	loop s1
 	mov dx,ax
 
-	;显示结果
+	;鏄剧ず缁撴灉
 	mov ax,0b878h
 	mov ds,ax
 	mov bx,288h

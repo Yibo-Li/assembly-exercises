@@ -1,4 +1,4 @@
-assume cs:code,ds:data
+﻿assume cs:code,ds:data
 data segment
 	db 'h12E332l@L#O*&^!88nI@cE$% %$T1O m33E44E55t y77O88u!()'
 	db '?'

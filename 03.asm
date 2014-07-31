@@ -1,4 +1,4 @@
-assume cs:code
+锘縜ssume cs:code
 
 Calculate segment
     db '1.3/1=          '
@@ -18,7 +18,7 @@ s1:
 	add cl,1
 	loop s2
 
-	;减法
+	;鍑忔硶
 	mov dl,[bx+4]
 	sub dl,30h
 	mov al,[bx]
@@ -36,7 +36,7 @@ s1:
 	loop s0
 
 s2:
-	;除法
+	;闄ゆ硶
 	mov dl,[bx+4]
 	sub dl,30h
 	mov al,[bx]
@@ -57,7 +57,7 @@ s2:
 	mov cx,1
 	loop s0
 
-	;程序入口
+	;绋嬪簭鍏ュ彛
 start:
 	mov ax,stack
 	mov ss,ax
@@ -74,7 +74,7 @@ start:
 	add cl,1
 	loop s1
 
-	;加法
+	;鍔犳硶
 	mov dl,[bx+4]
 	sub dl,30h
 	mov al,[bx]
@@ -91,7 +91,7 @@ start:
 	mov cx,1
 	loop s0
 
-	;打印结果
+	;鎵撳嵃缁撴灉
 s0:
 	mov ax,Calculate 
 	mov es,ax
