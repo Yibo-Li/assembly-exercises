@@ -105,7 +105,7 @@ move_ok: pop di
     pop cx
     pop dx 
 ret
-;;;;;;;ÑÓÊ±º¯Êý;;;;;
+;;;;;;;å»¶æ—¶å‡½æ•°;;;;;
 delay_time:
 push cx
 		mov cx,0ffh
